@@ -200,6 +200,9 @@ Diese Übersicht dient:
 
 ---
 
-## Contact
+## Weitere Repositories mit Übungen und Mini-Projekte auf GitLab
+https://gitlab.fhnw.ch/dashboard/projects
+
+## Kontakt
 Kapischan Sriganthan  
 kapischan.sriganthan@outlook.com
