@@ -110,7 +110,7 @@ kapischan.sriganthan@outlook.com
 
 ---
 
-# Software Engineering – Projektübersicht  
+# GitHub – Projektübersicht  
 Kapischan Sriganthan | BSc Wirtschaftsinformatik (FHNW)
 
 Dieses Dokument dient als **zentraler Einstiegspunkt** zu meinen Projekten in den Bereichen Software Engineering, Machine Learning und angewandter Forschung.  
@@ -197,3 +197,9 @@ Diese Übersicht dient:
 - als **Profil-README**
 - als Navigationspunkt über alle Projekte
 - als Einstieg für Dozierende, Recruiter und Reviewer
+
+---
+
+## Contact
+Kapischan Sriganthan  
+kapischan.sriganthan@outlook.com
