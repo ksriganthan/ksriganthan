@@ -1,4 +1,4 @@
-# Software Engineering – Project Overview  
+# GitHub – Projects Overview  
 Kapischan Sriganthan | BSc Business Information Technology (FHNW)
 
 This repository serves as a **central entry point** to my software engineering, data science, and research-oriented projects.  
