@@ -56,7 +56,7 @@ Six cases around one question: how do systems talk to each other, and who decide
 - Customer lookup worker with failure classified into business errors, technical errors, and fallback
 
 🔗 Documented overview:
-https://github.com/ksriganthan/software-architecture-cases
+[https://github.com/ksriganthan/software-architecture-cases](https://github.com/ksriganthan/software_architecture)
 
 ---
 
@@ -184,7 +184,7 @@ Sechs Cases rund um eine Frage: Wie sprechen Systeme miteinander, und wer entsch
 - Customer-Lookup-Worker, der Fehler in fachliche, technische und Fallback-Fälle trennt
 
 🔗 Dokumentierte Übersicht:
-https://github.com/ksriganthan/software-architecture-cases
+[https://github.com/ksriganthan/software-architecture-cases](https://github.com/ksriganthan/software_architecture)
 
 ---
 
