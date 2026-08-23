@@ -43,6 +43,23 @@ https://github.com/ksriganthan/Adaptive-Phishing-Awareness-Training-Environment-
 
 ---
 
+### 🏗️ Software Architecture – Integration Cases
+**Scope:** Six connected module cases (FHNW)<br>**Focus:** Process orchestration, rule engines, messaging, ESB, stream processing
+
+Six cases around one question: how do systems talk to each other, and who decides what happens next? Each case answers it with a different mechanism, and each one exposes the limits of the previous.
+
+- Camunda BPMN processes driven by external task workers (Java, Spring Boot)
+- Rule-based shipping decisions via Drools and a decision table maintained in Excel
+- Message-based job dispatch over ActiveMQ, using JMS topics and queues deliberately
+- MuleSoft ESB integrating a SOAP service into the messaging layer, with content-based routing and a dead letter queue
+- Kafka Streams pipeline detecting delivery delays in a continuous GPS event stream
+- Customer lookup worker with failure classified into business errors, technical errors, and fallback
+
+🔗 Documented overview:
+https://github.com/ksriganthan/software-architecture-cases
+
+---
+
 ### 🛒 Agile Application Lifecycle Management – Microservices
 **Scope:** Architecture-focused coursework  
 **Focus:** Microservices, REST, resilience
@@ -151,6 +168,23 @@ Forschungsprojekt zur **interaktiven Phishing-Awareness-Schulung**, von einem Pr
 
 🔗 Repository:  
 https://github.com/ksriganthan/Adaptive-Phishing-Awareness-Training-Environment-with-LLM-Interactive-Learning.git
+
+---
+
+### 🏗️ Software Architecture – Integration Cases
+**Umfang:** Sechs aufeinander aufbauende Modul-Cases (FHNW)<br>**Schwerpunkt:** Prozessorchestrierung, Regel-Engines, Messaging, ESB, Stream Processing
+
+Sechs Cases rund um eine Frage: Wie sprechen Systeme miteinander, und wer entscheidet, was als Nächstes passiert? Jeder Case beantwortet sie mit einem anderen Mechanismus – und jeder zeigt, wo der vorherige an seine Grenze kommt.
+
+- Camunda-BPMN-Prozesse, angetrieben von External Task Workern (Java, Spring Boot)
+- Regelbasierte Versandentscheidungen über Drools und eine in Excel gepflegte Entscheidungstabelle
+- Nachrichtenbasierte Auftragsdisposition über ActiveMQ, mit bewusst gewählten JMS-Topics und -Queues
+- MuleSoft-ESB, der einen SOAP-Service in die Messaging-Schicht integriert, mit inhaltsbasiertem Routing und Dead Letter Queue
+- Kafka-Streams-Pipeline, die Lieferverzögerungen in einem kontinuierlichen GPS-Eventstrom erkennt
+- Customer-Lookup-Worker, der Fehler in fachliche, technische und Fallback-Fälle trennt
+
+🔗 Dokumentierte Übersicht:
+https://github.com/ksriganthan/software-architecture-cases
 
 ---
 
