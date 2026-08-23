@@ -109,6 +109,8 @@ Kapischan Sriganthan
 kapischan.sriganthan@outlook.com
 
 ---
+<details>
+<summary><b>Projektübersicht auf Deutsch</b></summary>
 
 # GitHub – Projektübersicht  
 Kapischan Sriganthan | BSc Wirtschaftsinformatik (FHNW)
@@ -198,6 +200,7 @@ Diese Übersicht dient:
 - als Navigationspunkt über alle Projekte
 - als Einstieg für Dozierende, Recruiter und Reviewer
 
+</details>
 ---
 
 ## Weitere Repositories mit Übungen und Mini-Projekte auf GitLab
