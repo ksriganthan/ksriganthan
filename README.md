@@ -60,6 +60,29 @@ Six cases around one question: how do systems talk to each other, and who decide
 
 ---
 
+### ⚖️ PackOps – Industrial Weighing Machine Simulation
+**Scope:** Five-person team project (FHNW, IT-Projekt)<br>**Focus:** Client-server architecture, discrete simulation, full-stack development
+
+Software simulation of a **Newtec Weighing Machine 2008PCM** with memory pans. The core is a combination problem: out of a continuous stream of portions with varying weights, the machine has to form packages that land as close as possible to a target weight — within tolerance, and without individual portions getting stuck in the system.
+
+- Simulation engine over **8 parallel channels**, each with buffer, weighing and two memory buckets; a scheduled tick advances material by pull principle, searches for the best cross-channel weight combination, and retires portions that repeatedly fail as deadlocks
+- Spring Boot backend (Java 21) with a layered architecture and an isolated simulation package
+- React 19 / TypeScript frontend with a live dashboard, product catalog, statistics and user management
+- JWT authentication with three roles (admin, operator, viewer) and resource-level authorization
+- Trilingual (DE / EN / FR) down to product names and backend status messages, via relational translation tables
+- Containerized with Docker Compose: backend, Nginx-served frontend and PostgreSQL
+- Tested on three levels: unit, integration and 8 Playwright end-to-end cases
+
+**My contribution:** process handling (overview, details, live status), product catalog, user management, validation and logging.
+
+🔗 Documented overview:
+https://github.com/ksriganthan/packops
+
+🔗 Backend:
+https://github.com/ksriganthan/packops-backend
+
+---
+
 ### 🛒 Agile Application Lifecycle Management – Microservices
 **Scope:** Architecture-focused coursework  
 **Focus:** Microservices, REST, resilience
@@ -185,6 +208,29 @@ Sechs Cases rund um eine Frage: Wie sprechen Systeme miteinander, und wer entsch
 
 🔗 Dokumentierte Übersicht:
 [https://github.com/ksriganthan/software-architecture-cases](https://github.com/ksriganthan/software_architecture)
+
+---
+
+### ⚖️ PackOps – Simulation einer industriellen Wiegemaschine
+**Umfang:** Fünfköpfiges Teamprojekt (FHNW, IT-Projekt)<br>**Schwerpunkt:** Client-Server-Architektur, Simulation, Full-Stack-Entwicklung
+
+Softwareseitige Simulation einer **Newtec Weighing Machine 2008PCM** mit Memory Pans. Im Kern steht ein Kombinationsproblem: Aus einem laufenden Strom von Portionen unterschiedlichen Gewichts muss die Anlage Packungen bilden, die möglichst nahe an einem Zielgewicht liegen – innerhalb der Toleranz und ohne dass einzelne Portionen im System hängen bleiben.
+
+- Simulationskern über **8 parallele Kanäle** mit Buffer-, Weighing- und je zwei Memory-Buckets; ein zeitgesteuerter Tick schiebt Material nach dem Pull-Prinzip weiter, sucht kanalübergreifend die beste Gewichtskombination und führt dauerhaft erfolglose Portionen als Deadlock zurück
+- Spring-Boot-Backend (Java 21) mit geschichteter Architektur und gekapseltem Simulations-Package
+- React-19-/TypeScript-Frontend mit Live-Dashboard, Produktkatalog, Statistiken und Benutzerverwaltung
+- JWT-Authentifizierung mit drei Rollen (admin, operator, viewer) und ressourcenbezogener Berechtigungsprüfung
+- Dreisprachig (DE / EN / FR) bis hinunter zu Produktnamen und Statusmeldungen des Backends, über relationale Übersetzungstabellen
+- Containerisiert mit Docker Compose: Backend, Frontend hinter Nginx und PostgreSQL
+- Auf drei Ebenen getestet: Unit, Integration und 8 Playwright-End-to-End-Fälle
+
+**Mein Beitrag:** Prozessverwaltung (Übersicht, Details, Live-Status), Produktkatalog, Benutzerverwaltung, Validierung und Logging.
+
+🔗 Dokumentierte Übersicht:
+https://github.com/ksriganthan/packops
+
+🔗 Backend:
+https://github.com/ksriganthan/packops-backend
 
 ---
 
