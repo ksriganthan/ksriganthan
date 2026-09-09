@@ -1,14 +1,32 @@
 # GitHub – Projects Overview  
 Kapischan Sriganthan | BSc Business Information Technology (FHNW)
 
+🇩🇪 **Deutsche Fassung:** [Projektübersicht auf Deutsch](#github--projektübersicht) (weiter unten, zum Aufklappen)
+
 This repository serves as a **central entry point** to my software engineering, data science, and research-oriented projects.  
 Each listed repository contains its **own detailed README** with technical explanations, setup instructions, and documentation.
 
-The projects cover **software architecture, backend systems, algorithms, machine learning, AI-supported applications, and client development**, spanning coursework, applied projects, and published research.
+The projects cover **LLM applications and retrieval, software architecture, backend systems, algorithms, machine learning, and client development**, spanning a personal AI engineering sprint, coursework, applied projects, and published research.
 
 ---
 
 ## Project Roll-up (English)
+
+### 🗂️ hr-policy-assistant – RAG over Swiss Collective Labour Agreements
+**Scope:** Personal project, six-week AI engineering sprint (Aug–Oct 2026), in progress<br>**Focus:** Retrieval-augmented generation, LLM gateway, measured evaluation
+
+Question-answering system over public Swiss collective labour agreements (GAV) that cites its sources down to section number and page. Built with AI-assisted development and checked against a fixed set of test questions after every change.
+
+- ETL pipeline from PDF into a Chroma vector store: Unicode normalisation, header and footer removal by repetition count, chunking at section numbers with hierarchy path, tables rewritten row by row so every value keeps its column
+- Local embeddings (`bge-m3`) and a local language model (`gemma3:12b`) via Ollama, nothing leaves the machine
+- Own LLM gateway for every model call: one JSONL log line per call, retry with exponential backoff on connection errors, token and cost accounting
+- Answers with numbered citations; prompt rules derived from measured failures, each documented with the measurement behind it
+- Next in the sprint: structured output with Pydantic, FastAPI endpoint, LangGraph workflow with a critic role, evaluation set of 20–30 questions, Docker and GitHub Actions CI
+
+🔗 Repository:  
+https://github.com/ksriganthan/hr-policy-assistant
+
+---
 
 ### 📦 Software Engineering Portfolio
 **Scope:** Aggregated coursework projects  
@@ -158,11 +176,27 @@ Kapischan Sriganthan | BSc Wirtschaftsinformatik (FHNW)
 Dieses Dokument dient als **zentraler Einstiegspunkt** zu meinen Projekten in den Bereichen Software Engineering, Machine Learning und angewandter Forschung.  
 Jedes verlinkte Repository enthält eine **eigene ausführliche README** mit technischen Details und Dokumentation.
 
-Die Projekte decken **Backend-Systeme, Softwarearchitektur, Algorithmen, Machine Learning, KI-nahe Anwendungen und Client-Entwicklung** ab.
+Die Projekte decken **LLM-Anwendungen und Retrieval, Backend-Systeme, Softwarearchitektur, Algorithmen, Machine Learning und Client-Entwicklung** ab.
 
 ---
 
 ## Projekt-Roll-up (Deutsch)
+
+### 🗂️ hr-policy-assistant – RAG über Schweizer Gesamtarbeitsverträge
+**Umfang:** Eigenprojekt, sechswöchiger AI-Engineering-Sprint (Aug–Okt 2026), in Arbeit<br>**Schwerpunkt:** Retrieval-Augmented Generation, LLM-Gateway, gemessene Evaluation
+
+Frage-Antwort-System über öffentliche Schweizer Gesamtarbeitsverträge (GAV), das seine Quellen bis auf Ziffer und Seite belegt. Gebaut mit AI-gestützter Entwicklung und nach jeder Änderung an einem festen Satz Testfragen geprüft.
+
+- ETL-Strecke vom PDF in einen Chroma-Vektorstore: Unicode-Normalisierung, Kopf- und Fusszeilen über ihre Wiederholung entfernt, Schnitt an Gliederungsziffern mit Hierarchiepfad, Tabellen zeilenweise umgeschrieben, sodass jeder Wert seine Spalte behält
+- Lokale Embeddings (`bge-m3`) und lokales Sprachmodell (`gemma3:12b`) über Ollama, nichts verlässt den Rechner
+- Eigenes LLM-Gateway für jeden Modellaufruf: eine JSONL-Zeile pro Aufruf, Wiederholung mit exponentiellem Backoff bei Verbindungsfehlern, Token- und Kostenzählung
+- Antworten mit nummerierten Belegstellen; Prompt-Regeln aus gemessenen Fehlern abgeleitet, jede mit der Messung dahinter dokumentiert
+- Als Nächstes im Sprint: strukturierte Ausgabe mit Pydantic, FastAPI-Endpunkt, LangGraph-Workflow mit Kritik-Rolle, Eval-Set mit 20–30 Fragen, Docker und GitHub-Actions-CI
+
+🔗 Repository:  
+https://github.com/ksriganthan/hr-policy-assistant
+
+---
 
 ### 📦 Software Engineering Portfolio
 **Umfang:** Aggregierte Studienprojekte  
@@ -281,6 +315,7 @@ Diese Übersicht dient:
 - als Einstieg für Dozierende, Recruiter und Reviewer
 
 </details>
+
 ---
 
 ## Weitere Repositories mit Übungen und Mini-Projekte auf GitLab
