@@ -3,7 +3,7 @@ Kapischan Sriganthan | BSc Business Information Technology (FHNW)
 
 🇩🇪 **Deutsche Fassung:** [Projektübersicht auf Deutsch](#github--projektübersicht) (weiter unten, zum Aufklappen)
 
-This repository serves as a **central entry point** to my software engineering, data science, and research-oriented projects.  
+This page serves as a **central entry point** to my software engineering, data science, and research-oriented projects.  
 Each listed repository contains its **own detailed README** with technical explanations, setup instructions, and documentation.
 
 The projects cover **LLM applications and retrieval, software architecture, backend systems, algorithms, machine learning, and client development**, spanning a personal AI engineering sprint, coursework, applied projects, and published research.
@@ -13,15 +13,16 @@ The projects cover **LLM applications and retrieval, software architecture, back
 ## Project Roll-up (English)
 
 ### 🗂️ hr-policy-assistant – RAG over Swiss Collective Labour Agreements
-**Scope:** Personal project, six-week AI engineering sprint (Aug–Oct 2026), in progress<br>**Focus:** Retrieval-augmented generation, LLM gateway, measured evaluation
+**Scope:** Personal project, eight-week AI engineering sprint (24 Aug – 18 Oct 2026), in progress<br>**Focus:** Retrieval-augmented generation, LLM gateway, measured evaluation
 
-Question-answering system over public Swiss collective labour agreements (GAV) that cites its sources down to section number and page. Built with AI-assisted development and checked against a fixed set of test questions after every change.
+Question-answering system over public Swiss collective labour agreements (GAV) that cites its sources down to section number and page. Developed with AI assistance, every decision documented and re-measured against a fixed set of test questions after each change.
 
 - ETL pipeline from PDF into a Chroma vector store: Unicode normalisation, header and footer removal by repetition count, chunking at section numbers with hierarchy path, tables rewritten row by row so every value keeps its column
 - Local embeddings (`bge-m3`) and a local language model (`gemma3:12b`) via Ollama, nothing leaves the machine
 - Own LLM gateway for every model call: one JSONL log line per call, retry with exponential backoff on connection errors, token and cost accounting
 - Answers with numbered citations; prompt rules derived from measured failures, each documented with the measurement behind it
-- Next in the sprint: structured output with Pydantic, FastAPI endpoint, LangGraph workflow with a critic role, evaluation set of 20–30 questions, Docker and GitHub Actions CI
+- Structured output with Pydantic, a FastAPI endpoint, and an evaluation set of 20 questions with a target answer fixed per hospital before the run, measured in a reproducible baseline
+- Next in the sprint: LangGraph workflow with a critic role, agent loop for comparison, Docker and GitHub Actions CI
 
 🔗 Repository:  
 https://github.com/ksriganthan/hr-policy-assistant
@@ -29,8 +30,7 @@ https://github.com/ksriganthan/hr-policy-assistant
 ---
 
 ### 📦 Software Engineering Portfolio
-**Scope:** Aggregated coursework projects  
-**Focus:** Core software engineering fundamentals
+**Scope:** Aggregated coursework projects<br>**Focus:** Core software engineering fundamentals
 
 Collection of multiple study projects covering:
 - graph search and navigation algorithms
@@ -41,7 +41,7 @@ Collection of multiple study projects covering:
 This repository acts as a **container for multiple smaller projects**, each documented individually.
 
 🔗 Repository:  
-https://github.com/ksriganthan/SoftwareEngineeringPortfolio.git
+https://github.com/ksriganthan/SoftwareEngineeringPortfolio
 
 ---
 
@@ -102,8 +102,7 @@ https://github.com/ksriganthan/packops-backend
 ---
 
 ### 🛒 Agile Application Lifecycle Management – Microservices
-**Scope:** Architecture-focused coursework  
-**Focus:** Microservices, REST, resilience
+**Scope:** Architecture-focused coursework<br>**Focus:** Microservices, REST, resilience
 
 Implementation of a **microservice-based e-commerce system** consisting of:
 - Catalog Service (REST API, persistence)
@@ -115,13 +114,12 @@ Key aspects include:
 - resilience patterns and integration testing
 
 🔗 Repository:  
-https://github.com/ksriganthan/Agile_Application_Lifecycle_Management.git
+https://github.com/ksriganthan/Agile_Application_Lifecycle_Management
 
 ---
 
 ### 🎮 Battleship Client (Android)
-**Scope:** Client application  
-**Focus:** Mobile development & client–server interaction
+**Scope:** Client application<br>**Focus:** Mobile development & client–server interaction
 
 Android client for a multiplayer **Battleship game**, focusing on modern mobile development practices.
 
@@ -132,13 +130,12 @@ Key aspects:
 - UI state and interaction management
 
 🔗 Repository:  
-https://github.com/ksriganthan/Battleship_Client.git
+https://github.com/ksriganthan/Battleship_Client
 
 ---
 
 ### 🤖 Machine Learning with Python
-**Scope:** Data science & machine learning coursework  
-**Focus:** Python fundamentals and classical machine learning
+**Scope:** Data science & machine learning coursework<br>**Focus:** Python fundamentals and classical machine learning
 
 Structured learning repository developed in the module **Business Analytics / Machine Learning with Python (FHNW)**.
 
@@ -150,7 +147,7 @@ Key aspects:
 - Emphasis on understanding algorithms, not black-box usage
 
 🔗 Repository:  
-https://github.com/ksriganthan/MLwithPython.git
+https://github.com/ksriganthan/MLwithPython
 
 ---
 
@@ -183,15 +180,16 @@ Die Projekte decken **LLM-Anwendungen und Retrieval, Backend-Systeme, Softwarear
 ## Projekt-Roll-up (Deutsch)
 
 ### 🗂️ hr-policy-assistant – RAG über Schweizer Gesamtarbeitsverträge
-**Umfang:** Eigenprojekt, sechswöchiger AI-Engineering-Sprint (Aug–Okt 2026), in Arbeit<br>**Schwerpunkt:** Retrieval-Augmented Generation, LLM-Gateway, gemessene Evaluation
+**Umfang:** Eigenprojekt, achtwöchiger AI-Engineering-Sprint (24.08.–18.10.2026), in Arbeit<br>**Schwerpunkt:** Retrieval-Augmented Generation, LLM-Gateway, gemessene Evaluation
 
-Frage-Antwort-System über öffentliche Schweizer Gesamtarbeitsverträge (GAV), das seine Quellen bis auf Ziffer und Seite belegt. Gebaut mit AI-gestützter Entwicklung und nach jeder Änderung an einem festen Satz Testfragen geprüft.
+Frage-Antwort-System über öffentliche Schweizer Gesamtarbeitsverträge (GAV), das seine Quellen bis auf Ziffer und Seite belegt. Entwickelt mit AI-Unterstützung, jede Entscheidung dokumentiert und nach jeder Änderung an einem festen Satz Testfragen gemessen.
 
 - ETL-Strecke vom PDF in einen Chroma-Vektorstore: Unicode-Normalisierung, Kopf- und Fusszeilen über ihre Wiederholung entfernt, Schnitt an Gliederungsziffern mit Hierarchiepfad, Tabellen zeilenweise umgeschrieben, sodass jeder Wert seine Spalte behält
 - Lokale Embeddings (`bge-m3`) und lokales Sprachmodell (`gemma3:12b`) über Ollama, nichts verlässt den Rechner
 - Eigenes LLM-Gateway für jeden Modellaufruf: eine JSONL-Zeile pro Aufruf, Wiederholung mit exponentiellem Backoff bei Verbindungsfehlern, Token- und Kostenzählung
 - Antworten mit nummerierten Belegstellen; Prompt-Regeln aus gemessenen Fehlern abgeleitet, jede mit der Messung dahinter dokumentiert
-- Als Nächstes im Sprint: strukturierte Ausgabe mit Pydantic, FastAPI-Endpunkt, LangGraph-Workflow mit Kritik-Rolle, Eval-Set mit 20–30 Fragen, Docker und GitHub-Actions-CI
+- Strukturierte Ausgabe mit Pydantic, FastAPI-Endpunkt und ein Eval-Set mit 20 Fragen und vor dem Lauf festgelegter Sollantwort je Haus, in einem reproduzierbaren Baseline-Lauf gemessen
+- Als Nächstes im Sprint: LangGraph-Workflow mit Kritik-Rolle, Agent-Loop zum Vergleich, Docker und GitHub-Actions-CI
 
 🔗 Repository:  
 https://github.com/ksriganthan/hr-policy-assistant
@@ -199,17 +197,18 @@ https://github.com/ksriganthan/hr-policy-assistant
 ---
 
 ### 📦 Software Engineering Portfolio
-**Umfang:** Aggregierte Studienprojekte  
-**Schwerpunkt:** Software-Engineering-Grundlagen
+**Umfang:** Aggregierte Studienprojekte<br>**Schwerpunkt:** Software-Engineering-Grundlagen
 
 Sammlung mehrerer Projekte aus dem Studium, u. a.:
 - Navigations- und Suchalgorithmen
 - REST-basierte Backend-Systeme
 - Kryptografie-Implementierungen
-- Server-Architekturen
+- Server-Architekturen und Systementwurf
+
+Dieses Repository dient als **Container für mehrere kleinere Projekte**, jedes einzeln dokumentiert.
 
 🔗 Repository:  
-https://github.com/ksriganthan/SoftwareEngineeringPortfolio.git
+https://github.com/ksriganthan/SoftwareEngineeringPortfolio
 
 ---
 
@@ -269,41 +268,52 @@ https://github.com/ksriganthan/packops-backend
 ---
 
 ### 🛒 Agile Application Lifecycle Management – Microservices
-**Umfang:** Architekturprojekt  
-**Schwerpunkt:** Microservices & REST
+**Umfang:** Architekturorientiertes Studienprojekt<br>**Schwerpunkt:** Microservices, REST, Resilience
 
-Umsetzung eines **Microservice-basierten E-Commerce-Systems** mit klarer Service-Trennung und Containerisierung.
+Umsetzung eines **Microservice-basierten E-Commerce-Systems**, bestehend aus:
+- Catalog Service (REST-API, Persistenz)
+- Order Service (Weboberfläche, Service-Integration)
+
+Schwerpunkte:
+- Polyrepo-Microservice-Architektur
+- Docker und Docker Compose
+- Resilience-Patterns und Integrationstests
 
 🔗 Repository:  
-https://github.com/ksriganthan/Agile_Application_Lifecycle_Management.git
+https://github.com/ksriganthan/Agile_Application_Lifecycle_Management
 
 ---
 
 ### 🎮 Battleship Client (Android)
-**Umfang:** Client-Applikation  
-**Schwerpunkt:** Mobile Entwicklung
+**Umfang:** Client-Applikation<br>**Schwerpunkt:** Mobile Entwicklung und Client–Server-Interaktion
 
-Android-Client für ein Multiplayer-Battleship-Spiel mit Fokus auf moderne UI-Architektur und Client–Server-Kommunikation.
+Android-Client für ein Multiplayer-**Battleship-Spiel** mit Fokus auf moderne Praktiken der Mobile-Entwicklung.
+
+Schwerpunkte:
+- Kotlin und Jetpack Compose
+- MVVM-Architektur
+- REST-basierte Kommunikation mit einem Spielserver
+- Verwaltung von UI-Zustand und Interaktion
 
 🔗 Repository:  
-https://github.com/ksriganthan/Battleship_Client.git
+https://github.com/ksriganthan/Battleship_Client
 
 ---
 
 ### 🤖 Machine Learning with Python
-**Umfang:** Data Science & Machine Learning  
-**Schwerpunkt:** Grundlagen und klassische ML-Verfahren
+**Umfang:** Studienprojekt in Data Science und Machine Learning<br>**Schwerpunkt:** Python-Grundlagen und klassische ML-Verfahren
 
-Strukturiertes Lern-Repository aus dem Modul **Business Analytics / Machine Learning with Python**.
+Strukturiertes Lern-Repository aus dem Modul **Business Analytics / Machine Learning with Python (FHNW)**.
 
 Schwerpunkte:
-- Python-Grundlagen
-- Supervised & Unsupervised Learning
-- Modellbewertung und Hyperparameter-Tuning
+- Python-Grundlagen (Datenstrukturen, Datei-Ein- und -Ausgabe, Visualisierung)
+- Supervised Learning (k-NN, Decision Trees, Neuronale Netze)
+- Unsupervised Learning (Hierarchisches Clustering)
+- Modellbewertung (Train/Test-Split, Cross-Validation, Hyperparameter-Optimierung)
 - Verständnis der Algorithmen statt Black-Box-Nutzung
 
 🔗 Repository:  
-https://github.com/ksriganthan/MLwithPython.git
+https://github.com/ksriganthan/MLwithPython
 
 ---
 
@@ -315,12 +325,3 @@ Diese Übersicht dient:
 - als Einstieg für Dozierende, Recruiter und Reviewer
 
 </details>
-
----
-
-## Weitere Repositories mit Übungen und Mini-Projekte auf GitLab
-https://gitlab.fhnw.ch/dashboard/projects
-
-## Kontakt
-Kapischan Sriganthan  
-kapischan.sriganthan@outlook.com
