@@ -324,4 +324,10 @@ Diese Übersicht dient:
 - als Navigationspunkt über alle Projekte
 - als Einstieg für Dozierende, Recruiter und Reviewer
 
+---
+
+## Weitere Übungen und Mini-Projekte
+
+Weitere Übungen und Mini-Projekte liegen im GitLab der FHNW und sind nur mit Hochschul-Login einsehbar. Auf Anfrage zeige ich sie gern.
+
 </details>
