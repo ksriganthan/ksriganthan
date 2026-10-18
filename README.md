@@ -18,11 +18,15 @@ The projects cover **LLM applications and retrieval, software architecture, back
 Question-answering system over public Swiss collective labour agreements (GAV) that cites its sources down to section number and page. Developed with AI assistance, every decision documented and re-measured against a fixed set of test questions after each change.
 
 - ETL pipeline from PDF into a Chroma vector store: Unicode normalisation, header and footer removal by repetition count, chunking at section numbers with hierarchy path, tables rewritten row by row so every value keeps its column
-- Local embeddings (`bge-m3`) and a local language model (`gemma3:12b`) via Ollama, nothing leaves the machine
-- Own LLM gateway for every model call: one JSONL log line per call, retry with exponential backoff on connection errors, token and cost accounting
+- Local embeddings (`bge-m3`) and a local language model (`qwen2.5:14b`) via Ollama, nothing leaves the machine
+- Own LLM gateway for every model call: one JSONL log line per call, retry with growing delay on connection errors, token and cost accounting
 - Answers with numbered citations; prompt rules derived from measured failures, each documented with the measurement behind it
-- Structured output with Pydantic, a FastAPI endpoint, and an evaluation set of 20 questions with a target answer fixed per hospital before the run, measured in a reproducible baseline
-- Next in the sprint: LangGraph workflow with a critic role, agent loop for comparison, Docker and GitHub Actions CI
+- Structured output with Pydantic as an enforced JSON schema, plus four deterministic checks that hold every answer against the metadata of its citations
+- Evaluation set of 20 questions with a target answer fixed per hospital before the run, one CSV per run
+- **Three paths to an answer, measured against each other:** single-pass, a LangGraph workflow with a critic role, and an agent loop. On the same model and the same evaluation set the workflow wins on every metric, completing 20 of 20 cases against 17 and using about 40 percent less context per case
+- The critic's false positives traced to their cause through a two-factor ablation rather than guessed at through prompt attempts
+- Web interface served from the same application, with the three paths selectable
+- Next: Docker and GitHub Actions CI with an evaluation gate
 
 🔗 Repository:  
 https://github.com/ksriganthan/hr-policy-assistant
@@ -185,11 +189,15 @@ Die Projekte decken **LLM-Anwendungen und Retrieval, Backend-Systeme, Softwarear
 Frage-Antwort-System über öffentliche Schweizer Gesamtarbeitsverträge (GAV), das seine Quellen bis auf Ziffer und Seite belegt. Entwickelt mit AI-Unterstützung, jede Entscheidung dokumentiert und nach jeder Änderung an einem festen Satz Testfragen gemessen.
 
 - ETL-Strecke vom PDF in einen Chroma-Vektorstore: Unicode-Normalisierung, Kopf- und Fusszeilen über ihre Wiederholung entfernt, Schnitt an Gliederungsziffern mit Hierarchiepfad, Tabellen zeilenweise umgeschrieben, sodass jeder Wert seine Spalte behält
-- Lokale Embeddings (`bge-m3`) und lokales Sprachmodell (`gemma3:12b`) über Ollama, nichts verlässt den Rechner
-- Eigenes LLM-Gateway für jeden Modellaufruf: eine JSONL-Zeile pro Aufruf, Wiederholung mit exponentiellem Backoff bei Verbindungsfehlern, Token- und Kostenzählung
+- Lokale Embeddings (`bge-m3`) und lokales Sprachmodell (`qwen2.5:14b`) über Ollama, nichts verlässt den Rechner
+- Eigenes LLM-Gateway für jeden Modellaufruf: eine JSONL-Zeile pro Aufruf, Wiederholung mit wachsender Pause bei Verbindungsfehlern, Token- und Kostenzählung
 - Antworten mit nummerierten Belegstellen; Prompt-Regeln aus gemessenen Fehlern abgeleitet, jede mit der Messung dahinter dokumentiert
-- Strukturierte Ausgabe mit Pydantic, FastAPI-Endpunkt und ein Eval-Set mit 20 Fragen und vor dem Lauf festgelegter Sollantwort je Haus, in einem reproduzierbaren Baseline-Lauf gemessen
-- Als Nächstes im Sprint: LangGraph-Workflow mit Kritik-Rolle, Agent-Loop zum Vergleich, Docker und GitHub-Actions-CI
+- Strukturierte Ausgabe mit Pydantic als erzwungenes JSON-Schema, dazu vier deterministische Prüfregeln, die jede Antwort gegen die Metadaten ihrer Belegstellen halten
+- Eval-Set mit 20 Fragen und vor dem Lauf festgelegter Sollantwort je Haus, Ergebnis je Lauf als CSV
+- **Drei Wege zur Antwort, gegeneinander gemessen:** einstufig, LangGraph-Workflow mit Kritik-Rolle und Agent-Loop. Auf demselben Modell und demselben Eval-Set gewinnt der Workflow in jeder Kennzahl, 20 von 20 Fällen durchgelaufen gegen 17 und rund 40 Prozent weniger Kontext je Fall
+- Die Fehlalarme der Kritik-Rolle über eine Ablation mit zwei Faktoren auf ihre Ursache zurückgeführt statt über Prompt-Versuche geraten
+- Bedienoberfläche aus derselben Anwendung ausgeliefert, die drei Wege darin wählbar
+- Als Nächstes: Docker und GitHub-Actions-CI mit Eval-Gate
 
 🔗 Repository:  
 https://github.com/ksriganthan/hr-policy-assistant
