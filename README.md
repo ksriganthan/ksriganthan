@@ -336,6 +336,6 @@ Diese Übersicht dient:
 
 ## Weitere Übungen und Mini-Projekte
 
-Weitere Übungen und Mini-Projekte liegen im GitLab der FHNW und sind nur mit Hochschul-Login einsehbar. Auf Anfrage zeige ich sie gern.
+Weitere Übungen und Mini-Projekte aus dem Studium liegen in privaten Repositories auf GitHub. Auf Anfrage gebe ich Einsicht.
 
 </details>
